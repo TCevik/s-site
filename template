@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kleurmodellen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://tctam.nl/style.css">
+    <style>
+        /* Begin met alle elementen onzichtbaar */
+        .fade-in {
+            opacity: 0 !important;
+            transition: opacity 1s ease-in-out !important;
+        }
+
+        /* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
+        .visible {
+            opacity: 1 !important;
+        }
+    </style>
+    <script>
+        // Controleer of het huidige domein http://127.0.0.1:5500/ is
+        // Dit is zodat het bekijken van de site in de edit modus anders is dan op het echte domein
+        if (window.location.hostname === "127.0.0.1" && window.location.port === "5500") {
+            // Laad het script van /script.js
+            document.write('<script src="/script.js"><\/script>');
+        } else {
+            // Laad het script van /s-site/script.js
+            document.write('<script src="/s-site/script.js"><\/script>');
+        }
+
+        // Functie om elementen één voor één te laten infaden
+        function fadeInElements() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 100); // De vertraging is 100ms per element
+            });
+        }
+
+        // Wanneer de pagina is geladen, start het infaden
+        window.addEventListener('load', fadeInElements);
+    </script>
+</head>
+
+<body>
+    <h1 class="fade-in">Kleurmodellen</h1>
+    
+</body>
+
+</html>
