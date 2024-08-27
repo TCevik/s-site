@@ -1,3 +1,7 @@
+var metaTag = document.createElement('meta');
+metaTag.name = 'viewport';
+metaTag.content = 'width=device-width, initial-scale=1';
+
 document.addEventListener("DOMContentLoaded", function () {
 	sideMenuNav();
 });

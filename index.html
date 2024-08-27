@@ -3,19 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Homepagina</title>
     <link rel="stylesheet" href="https://tctam.nl/style.css">
     <style>
         /* Begin met alle elementen onzichtbaar */
         .fade-in {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+            opacity: 0 !important;
+            transition: opacity 1s ease-in-out !important;
         }
 
         /* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
         .visible {
-            opacity: 1;
+            opacity: 1 !important;
         }
 
         /* Voor de uitschuifbare lijst met vakken */
@@ -29,6 +28,16 @@
         #subjects.expanded {
             max-height: 200px;
             /* Pas deze waarde aan op basis van de verwachte hoogte van de inhoud */
+        }
+
+        #hobbies {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Voegt ruimte toe tussen tekst en afbeelding */
+        }
+
+        #hobbies-text {
+            max-width: 75%; /* Zorgt ervoor dat de tekst niet te breed wordt */
         }
     </style>
     <script>
@@ -121,13 +130,6 @@
     <h3 class="fade-in">Door Tamer Çevik</h3>
 
     <div class="diff-color-section1 fade-in" id="aboutme" style="display: flex; flex-direction: column;">
-        <button id="shareURL" class="fade-in"
-            style="width: 100%; border-top-right-radius: var(--border-radius3); border-top-left-radius: var(--border-radius3);">
-            <img style="border-radius: 0px; margin-right: 5px; margin-bottom: -5px;" width="20px"
-                src="/assets/share-icon.png" alt="Deel icon">
-            Deel deze website
-        </button>
-
         <div style="display: flex; width: 100%; justify-content: space-between; margin-top: 20px;">
             <div id="tctam-logo" class="fade-in"
                 style="margin-top: -3px; width: 200px; margin-right: 20px; text-align: right;">
@@ -138,12 +140,18 @@
                 <h3 id="age" class="fade-in">Ik ben Tamer, een (leeftijd) jarige jongen die websites maakt.</h3>
                 <p style="color: var(--h1234-color);" class="aboutme-text fade-in" id="birthday"></p>
 
-                <b class="fade-in">Hobby's:</b>
-                <p style="margin-top: 0px;" class="fade-in">- Ik doe karate als sport.
-                    <br>- Ik geef zwemles aan kinderen bij zwemvereniging <a href="https://evzv.nl"
-                        target="_blank">EVZV</a>.
-                    <br>- En natuurlijk maak ik ook heel graag websites.
-                </p>
+                <div id="hobbies">
+                    <div id="hobbies-text">
+                        <b class="fade-in">Hobby's:</b>
+                        <p style="margin-top: 0px;" class="fade-in">- Ik doe karate als sport.
+                            <br>- Ik geef zwemles aan kinderen bij zwemvereniging <a href="https://evzv.nl" target="_blank">EVZV</a>.
+                            <br>- En natuurlijk maak ik ook heel graag websites.
+                        </p>
+                    </div>
+                    <div id="hobbies-img">
+                        <img class="fade-in" src="https://cdn.pixabay.com/photo/2024/01/28/15/00/karate-8537724_960_720.png" width="200px" height="200px" alt="Karate afbeelding" id="karate-pic">
+                    </div>
+                </div>
 
                 <b class="fade-in">Later:</b>
                 <p style="margin-top: 0px;" class="fade-in">- Ik wilde voordat ik sites maakte YouTuber worden, ik
@@ -179,6 +187,31 @@
             </div>
         </div>
     </div>
+
+    <center>
+        <div style="width: 70%;">
+            <h3 class="fade-in">Deze site:</h3>
+            <p class="fade-in">Ik heb deze website gemaakt voor een schoolproject. Hierin bespreek ik drie belangrijke
+                onderwerpen:
+                kleurmodellen, het binaire stelsel en compressie.</p>
+
+            <p class="fade-in">Kleurmodellen laten zien hoe kleuren worden weergegeven in digitale media. Ik leg uit hoe
+                modellen zoals RGB en
+                CMY werken en waar ze voor worden gebruikt.</p>
+
+            <p class="fade-in">Het binaire stelsel is de basis van computerdata, waarbij informatie wordt gecodeerd met
+                0's en 1's. Dit stelsel
+                is cruciaal voor computertechnologie.</p>
+
+            <p class="fade-in">Ten slotte behandel ik compressie, een techniek om bestanden kleiner te maken met of
+                zonder veel kwaliteitsverlies. Dit
+                is handig voor het efficiënt opslaan en verzenden van gegevens.</p>
+
+            <p class="fade-in">Deze site biedt een overzichtelijke uitleg van deze onderwerpen, zodat je een goed begrip
+                krijgt van hun werking
+                en toepassingen.</p>
+        </div>
+    </center>
 </body>
 
 </html>
