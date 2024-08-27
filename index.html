@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <title>Homepagina</title>
@@ -33,11 +34,60 @@
         #hobbies {
             display: flex;
             align-items: center;
-            gap: 20px; /* Voegt ruimte toe tussen tekst en afbeelding */
+            gap: 20px;
+            /* Voegt ruimte toe tussen tekst en afbeelding */
         }
 
         #hobbies-text {
-            max-width: 75%; /* Zorgt ervoor dat de tekst niet te breed wordt */
+            max-width: 75%;
+            /* Zorgt ervoor dat de tekst niet te breed wordt */
+        }
+
+        #later {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Voegt ruimte toe tussen tekst en afbeelding */
+        }
+
+        #later-text {
+            max-width: 75%;
+            /* Zorgt ervoor dat de tekst niet te breed wordt */
+        }
+
+        /* Media query voor schermen kleiner dan 800px */
+        @media (max-width: 800px) {
+            #hobbies-img {
+                display: none;
+                /* Verbergt de afbeelding */
+            }
+
+            #later-img {
+                display: none;
+                /* Verbergt de afbeelding */
+            }
+
+            #tctam-logo {
+                display: none;
+            }
+
+            #hobbies-text {
+                max-width: 100%;
+                /* Zorgt ervoor dat de tekst weer breed mag zijn */
+            }
+
+            #later-text {
+                max-width: 100%;
+                /* Zorgt ervoor dat de tekst weer breed mag zijn */
+            }
+
+            #hobbies {
+                margin-top: 20px !important;
+            }
+
+            #later {
+                margin-top: 15px !important;
+            }
         }
     </style>
     <script>
@@ -140,28 +190,43 @@
                 <h3 id="age" class="fade-in">Ik ben Tamer, een (leeftijd) jarige jongen die websites maakt.</h3>
                 <p style="color: var(--h1234-color);" class="aboutme-text fade-in" id="birthday"></p>
 
-                <div id="hobbies">
+                <div style="margin-top: -20px;" id="hobbies">
                     <div id="hobbies-text">
                         <b class="fade-in">Hobby's:</b>
                         <p style="margin-top: 0px;" class="fade-in">- Ik doe karate als sport.
-                            <br>- Ik geef zwemles aan kinderen bij zwemvereniging <a href="https://evzv.nl" target="_blank">EVZV</a>.
+                            <br>- Ik geef zwemles aan kinderen bij zwemvereniging <a href="https://evzv.nl"
+                                target="_blank">EVZV</a>.
                             <br>- En natuurlijk maak ik ook heel graag websites.
                         </p>
                     </div>
                     <div id="hobbies-img">
-                        <img class="fade-in" src="https://cdn.pixabay.com/photo/2024/01/28/15/00/karate-8537724_960_720.png" width="200px" height="200px" alt="Karate afbeelding" id="karate-pic">
+                        <img class="fade-in"
+                            src="/assets/karate.png"
+                            width="200px" height="200px" alt="Karate afbeelding" id="karate-pic">
                     </div>
                 </div>
 
-                <b class="fade-in">Later:</b>
-                <p style="margin-top: 0px;" class="fade-in">- Ik wilde voordat ik sites maakte YouTuber worden, ik
-                    maakte een
-                    website voor mijn kanaal met Google Sites (dat is heel simpel). Maar toen ik die site had gemaakt
-                    zag ik hoe
-                    leuk ik het vind om met computers te werken dus ben ik deze site gaan maken.
-                    <br>- Mijn nieuwe plan is om als ik volwassen ben software engineer te worden. Als software engineer
-                    ontwerp, ontwikkel en test je softwareapplicaties.
-                </p>
+                <div style="margin-top: -30px;" id="later">
+                    <div id="later-text">
+                        <b class="fade-in">Later:</b>
+                        <p style="margin-top: 0px;" class="fade-in">- Ik wilde voordat ik sites maakte YouTuber worden,
+                            ik
+                            maakte een
+                            website voor mijn kanaal met Google Sites (dat is heel simpel). Maar toen ik die site had
+                            gemaakt
+                            zag ik hoe
+                            leuk ik het vind om met computers te werken dus ben ik deze site gaan maken.
+                            <br>- Mijn nieuwe plan is om als ik volwassen ben software engineer te worden. Als software
+                            engineer
+                            ontwerp, ontwikkel en test je softwareapplicaties.
+                        </p>
+                    </div>
+                    <div id="later-img">
+                        <img class="fade-in"
+                            src="/assets/computer.png"
+                            width="200px" height="200px" alt="Karate afbeelding" id="karate-pic">
+                    </div>
+                </div>
 
                 <b class="fade-in">Middelbare school:</b>
                 <p style="margin-top: 0px;" class="fade-in">- Ik doe havo. Ik vind dat ik op een leuke
