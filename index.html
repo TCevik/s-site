@@ -41,6 +41,54 @@
 
         // Wanneer de pagina is geladen, start het infaden
         window.addEventListener('load', fadeInElements);
+
+        function getNextBirthday() {
+            const today = new Date();
+            const currentYear = today.getFullYear();
+            let nextBirthday = new Date(currentYear, 4, 18);
+
+            if (nextBirthday < today) {
+                nextBirthday.setFullYear(currentYear + 1, 4, 18);
+            }
+
+            return nextBirthday;
+        }
+
+        function calculateAge() {
+            const birthdate = new Date(2009, 4, 18); // Jouw geboortedatum hier
+            const today = new Date();
+            let age = today.getFullYear() - birthdate.getFullYear();
+
+            // Aanpassen als de verjaardag nog niet heeft plaatsgevonden dit jaar
+            if (today < new Date(today.getFullYear(), birthdate.getMonth(), birthdate.getDate())) {
+                age--;
+            }
+
+            return age;
+        }
+
+        function updateAgeAndCountdown() {
+            const age = calculateAge();
+            document.getElementById('age').innerHTML = `Ik ben Tamer, een ${age} jarige jongen die websites maakt.`;
+
+            const nextBirthday = getNextBirthday();
+            const today = new Date();
+
+            if (today.getMonth() === 4 && today.getDate() === 18) {
+                document.getElementById('birthday').innerHTML = "Het is vandaag 18 mei, dus ik ben vandaag jarig!!! 🥳";
+            } else {
+                const timeLeft = nextBirthday - today;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('birthday').innerHTML = `Nog ${days} dagen, ${hours} uur, ${minutes} minuten, en ${seconds} seconden tot mijn verjaardag!`;
+            }
+        }
+
+        setInterval(updateAgeAndCountdown, 100);
     </script>
 </head>
 <body>
