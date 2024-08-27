@@ -103,9 +103,4 @@ function sideMenuNav() {
 
 	document.body.appendChild(openButton);
 	document.body.appendChild(sideBar);
-
-	const loggedIn = localStorage.getItem('loggedIn');
-	if (loggedIn === 'true') {
-		document.getElementById('login-register-button-nav').style.display = 'none';
-	}
 }
