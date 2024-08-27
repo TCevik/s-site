@@ -2,8 +2,26 @@ document.addEventListener("DOMContentLoaded", function () {
 	sideMenuNav();
 });
 
+window.addEventListener('load', function () {
+	let loadCount = localStorage.getItem('loadCount') || 0;
+
+	loadCount++;
+
+	if (loadCount < 2) {
+		let openButton = document.getElementById('openButton');
+
+		if (openButton) {
+			openButton.textContent = "Klik hier voor alle pagina's op de site.";
+			openButton.style.maxWidth = '150px';
+		}
+	}
+
+	localStorage.setItem('loadCount', loadCount);
+});
+
 var buttons = `
-    <button onclick="window.location.href='/'">Homepagina</button>
+	<h1>Site Navigatie</h1>
+    <button onclick="window.location.href='/s-site/'">Homepagina</button>
 
 	<button onclick="window.open('https://github.com/TCevik/s-site', '_blank')">Bekijk de broncode van de site</button>
 `;
