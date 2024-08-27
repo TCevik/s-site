@@ -20,9 +20,12 @@ window.addEventListener('load', function () {
 });
 
 var buttons = `
-	<h1>Site Navigatie</h1>
+	<h3>Site Navigatie</h3>
     <button onclick="window.location.href='/s-site/'">Homepagina</button>
-
+	<button onclick="window.location.href='/s-site/kleurmodellen'">Kleurmodellen</button>
+    <button onclick="window.location.href='/s-site/binair-stelsel'">Binair Stelsel</button>
+	<button onclick="window.location.href='/s-site/compressie'">Compressie</button>
+	<p></p>
 	<button onclick="window.open('https://github.com/TCevik/s-site', '_blank')">Bekijk de broncode van de site</button>
 `;
 
