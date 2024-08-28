@@ -25,6 +25,7 @@ var buttons = `
 	<button onclick="window.location.href='/s-site/kleurmodellen'">Kleurmodellen</button>
     <button onclick="window.location.href='/s-site/binair-stelsel'">Binair Stelsel</button>
 	<button onclick="window.location.href='/s-site/compressie'">Compressie</button>
+	<button onclick="window.location.href='/s-site/bitmap-vectorafbeeldingen'">Bitmap- en vectorafbeeldingen</button>
 	<p></p>
 	<button onclick="window.open('https://github.com/TCevik/s-site', '_blank')">Bekijk de broncode van de site</button>
 `;
