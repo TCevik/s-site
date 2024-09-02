@@ -6,6 +6,7 @@
     <title>Kleurmodellen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://tctam.nl/style.css">
+    <script src="https://tctam.nl/s-site/script.js"></script>
     <style>
         /* Begin met alle elementen onzichtbaar */
         .fade-in {
@@ -19,16 +20,6 @@
         }
     </style>
     <script>
-        // Controleer of het huidige domein http://127.0.0.1:5500/ is
-        // Dit is zodat het bekijken van de site in de edit modus anders is dan op het echte domein
-        if (window.location.hostname === "127.0.0.1" && window.location.port === "5500") {
-            // Laad het script van /script.js
-            document.write('<script src="/script.js"><\/script>');
-        } else {
-            // Laad het script van /s-site/script.js
-            document.write('<script src="/s-site/script.js"><\/script>');
-        }
-
         // Functie om elementen één voor één te laten infaden
         function fadeInElements() {
             const elements = document.querySelectorAll('.fade-in');
