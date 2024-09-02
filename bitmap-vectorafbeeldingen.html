@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bitmap en Vectorafbeeldingen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://tctam.nl/style.css">
+    <script src="https://tctam.nl/s-site/script.js"></script>
+    <style>
+        /* Begin met alle elementen onzichtbaar */
+        .fade-in {
+            opacity: 0 !important;
+            transition: opacity 1s ease-in-out !important;
+        }
+
+        /* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
+        .visible {
+            opacity: 1 !important;
+        }
+
+        body {
+            text-align: left;
+        }
+    </style>
+    <script>
+        // Functie om elementen één voor één te laten infaden
+        function fadeInElements() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 100); // De vertraging is 100ms per element
+            });
+        }
+
+        // Wanneer de pagina is geladen, start het infaden
+        window.addEventListener('load', fadeInElements);
+    </script>
+</head>
+
+<body style="margin: 0 auto; width: 80%;">
+    <h1 class="fade-in">Bitmap en Vectorafbeeldingen</h1>
+    <b>Een afbeelding, je hebt er een hele boel. Maar hoe werken ze nou? Hoe wordt de foto opgeslagen, terwijl die zo
+        min mogelijk data kost? Wat voor soorten afbeeldingen zijn er? In dit verhaal leer je dat allemal.</b>
+    <p>In deze blog leer je over:</p>
+    <a href="#bitmap-vector">1. Het verschil tussen een bitmapafbeelding en een vectorafbeelding</a>
+    <br><a href="#geluid">2. Hoe geluid gedigitaliseerd word en wat samplen en sample rate betekenen</a>
+
+    <br>
+    <br>
+
+    <h3 id="bitmap-vector">Het verschil tussen een bitmapafbeelding en een vectorafbeelding</h3>
+    <h4>Bitmapafbeelding:</h4>
+    <p>Zoals je op <a href="/s-site/kleurmodellen.html">deze pagina</a> hebt geleerd, bestaat een afbeelding uit een
+        aantal pixels. Zij hebben allemaal een bepaalde kleur. Hoe meer pixels hoe hoger de <a
+            onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
+            title="Resolutie is de scherpte van een beeld, bepaald door het aantal pixels. Hoe meer pixels, hoe scherper het beeld.">ⓘ
+            resolutie</a>. Een foto die is
+        gemaakt van pixels noemen we een bitmapafbeelding.</p>
+    <p>Deze afbeeldingen hebben 2 belangrijke eigenschappen/nadelen.
+        <br>Een bitmapafbeelding kost erg veel opslagruimte, zo kan die al snel tot 5mb groot worden. Dat betekent dat
+        je op de gemiddelde telefoon (128GB) 25600 afbeeldingen kan hebben, dat lijkt misschien veel, maar let er wel op
+        dat je telefoon ook nog een besturingssysteem en apps bevat.
+        <br>Als je op een bitmapafbeelding gaat inzoomen worden de pixels steeds zichtbaarder en vermindert de
+        kwaliteit.
+    </p>
+    <img width="505" height="280" style="background-color: var(--bg-accent-color2); padding: 5px;"
+        src="/s-site/assets/pixels-bad-good.png">
+    <p>Stel dat je een afbeelding hebt die een grote oppervlakte moet bedekken. Dan moet je een foto van een hoge <a
+            onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
+            title="Resolutie is de scherpte van een beeld, bepaald door het aantal pixels. Hoe meer pixels, hoe scherper het beeld.">ⓘ
+            resolutie</a> hebben, je kan je dan wel voorstellen dat dat heel veel opslag kost. Daar hebben we een vectorafbeelding voor.</p>
+    
+    <h4>Vectorafbeelding</h4>
+    <p>Een vectorafbeelding bestaat niet uit allemaal losse pixels, maar uit de vormen van de afbeelding.</p>
+    <img width="300" height="300" style="background-color: var(--bg-accent-color2); padding: 5px;"
+        src="/s-site/assets/logo.png">
+</body>
+
+</html>
