@@ -18,10 +18,6 @@
         .visible {
             opacity: 1 !important;
         }
-
-        body {
-            text-align: left;
-        }
     </style>
     <script>
         // Functie om elementen één voor één te laten infaden
@@ -39,43 +35,89 @@
     </script>
 </head>
 
-<body style="margin: 0 auto; width: 80%;">
+<body style="margin: 0 auto; width: 80%; text-align: left;">
     <h1 class="fade-in">Bitmap en Vectorafbeeldingen</h1>
-    <b>Een afbeelding, je hebt er een hele boel. Maar hoe werken ze nou? Hoe wordt de foto opgeslagen, terwijl die zo
+    <b class="fade-in">Een afbeelding, je hebt er een hele boel. Maar hoe werken ze nou? Hoe wordt de foto opgeslagen,
+        terwijl die zo
         min mogelijk data kost? Wat voor soorten afbeeldingen zijn er? In dit verhaal leer je dat allemal.</b>
-    <p>In deze blog leer je over:</p>
-    <a href="#bitmap-vector">1. Het verschil tussen een bitmapafbeelding en een vectorafbeelding</a>
-    <br><a href="#geluid">2. Hoe geluid gedigitaliseerd word en wat samplen en sample rate betekenen</a>
+    <p class="fade-in">In deze blog leer je over:</p>
+    <a class="fade-in" href="#bitmap-vector">1. Het verschil tussen een bitmapafbeelding en een vectorafbeelding</a>
+    <br><a class="fade-in" href="#geluid">2. Hoe geluid gedigitaliseerd word en wat samplen en sample rate betekenen</a>
 
     <br>
     <br>
 
-    <h3 id="bitmap-vector">Het verschil tussen een bitmapafbeelding en een vectorafbeelding</h3>
-    <h4>Bitmapafbeelding:</h4>
-    <p>Zoals je op <a href="/s-site/kleurmodellen.html">deze pagina</a> hebt geleerd, bestaat een afbeelding uit een
+    <h3 class="fade-in" id="bitmap-vector">Het verschil tussen een bitmapafbeelding en een vectorafbeelding</h3>
+    <h4 class="fade-in">Bitmapafbeelding:</h4>
+    <p class="fade-in">Zoals je op <a href="/s-site/kleurmodellen.html">deze pagina</a> hebt geleerd, bestaat een
+        afbeelding uit een
         aantal pixels. Zij hebben allemaal een bepaalde kleur. Hoe meer pixels hoe hoger de <a
             onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
             title="Resolutie is de scherpte van een beeld, bepaald door het aantal pixels. Hoe meer pixels, hoe scherper het beeld.">ⓘ
             resolutie</a>. Een foto die is
         gemaakt van pixels noemen we een bitmapafbeelding.</p>
-    <p>Deze afbeeldingen hebben 2 belangrijke eigenschappen/nadelen.
+    <p class="fade-in">Deze afbeeldingen hebben 2 belangrijke eigenschappen/nadelen.
         <br>Een bitmapafbeelding kost erg veel opslagruimte, zo kan die al snel tot 5mb groot worden. Dat betekent dat
         je op de gemiddelde telefoon (128GB) 25600 afbeeldingen kan hebben, dat lijkt misschien veel, maar let er wel op
         dat je telefoon ook nog een besturingssysteem en apps bevat.
         <br>Als je op een bitmapafbeelding gaat inzoomen worden de pixels steeds zichtbaarder en vermindert de
         kwaliteit.
     </p>
-    <img width="505" height="280" style="background-color: var(--bg-accent-color2); padding: 5px;"
+    <img class="fade-in" width="505" height="280" style="background-color: var(--bg-accent-color2); padding: 5px;"
         src="/s-site/assets/pixels-bad-good.png">
-    <p>Stel dat je een afbeelding hebt die een grote oppervlakte moet bedekken. Dan moet je een foto van een hoge <a
-            onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
+    <p class="fade-in">Stel dat je een afbeelding hebt die een grote oppervlakte moet bedekken. Dan moet je een foto van
+        een hoge <a onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
             title="Resolutie is de scherpte van een beeld, bepaald door het aantal pixels. Hoe meer pixels, hoe scherper het beeld.">ⓘ
-            resolutie</a> hebben, je kan je dan wel voorstellen dat dat heel veel opslag kost. Daar hebben we een vectorafbeelding voor.</p>
-    
-    <h4>Vectorafbeelding</h4>
-    <p>Een vectorafbeelding bestaat niet uit allemaal losse pixels, maar uit de vormen van de afbeelding.</p>
-    <img width="300" height="300" style="background-color: var(--bg-accent-color2); padding: 5px;"
+            resolutie</a> hebben, je kan je dan wel voorstellen dat dat heel veel opslag kost. Daar hebben we een
+        vectorafbeelding voor.</p>
+
+    <h4 class="fade-in">Vectorafbeelding</h4>
+    <p class="fade-in">Een vectorafbeelding bestaat niet uit allemaal losse pixels, maar uit de vormen van de
+        afbeelding.</p>
+    <img class="fade-in" width="300" height="300" style="background-color: var(--bg-accent-color2); padding: 5px;"
         src="/s-site/assets/logo.png">
+    <p class="fade-in">Dat zou je logo zijn, een bitmapafbeelding van 8 x 11 = 88px. Maar als je nou zou willen dat de
+        kwaliteit zo goed mogelijk blijft, sla je hem op als een vectorafbeelding.</p>
+    <p class="fade-in">Dat zou er ongeveer een beetje zo uitzien: vierkant 2,2 blauw, dat kan je dan zien als een
+        vierkant van 2x2 px. Zo zou die dus bij het vergroten of verkleinen even scherp blijven omdat die een vierkant
+        <a onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
+            title="Dynamisch betekent dat iets zich aanpast aan de situatie. Het beschrijft situaties of systemen die flexibel zijn en kunnen aanpassen.">ⓘ
+            dynamisch</a> geladen.
+    </p>
+    <p class="fade-in">Het nadeel van deze techniek is dat het onmogelijk is om met een fototoestel een vectorafbeelding
+        te maken. Dit komt omdat de wereld niet bestaat uit vormen, maar uit unieke verschillende dingen.</p>
+
+    <h3 class="fade-in">Geluidsfragmenten:</h3>
+    <b class="fade-in">Hoe kunnen computers nou geluid opslaan</b>
+    <p class="fade-in">Geluid is eigenlijk een soort trilling. Om dit in een computer op te slaan, maken we eur een
+        soort digitale foto
+        van. Met een microfoon vangen we die trillingen op en zetten ze om in elektrische signalen en vervolgens in
+        nullen en enen. Dit proces wordt <b>samplen</b> genoemd Zo kunnen we het geluid later weer afspelen door die
+        getallen om te zetten in
+        elektrische signalen die de speakers laten trillen.</p>
+    <p class="fade-in">Tijdens het samplen word er bijvoorbeeld 1 keer per seconde gemeten wat de sterkte is van het
+        geluid. Dit kun je in een grafiek weergeven.</p>
+    <img class="fade-in" width="auto" height="300"
+        style="background-color: var(--bg-accent-color2); filter: brightness(1.2); padding: 5px;"
+        src="/s-site/assets/grafiek.png">
+    <p class="fade-in">De horizontale as geeft het verloop van de tijd aan, en de verticale as geeft de sterkte van het
+        geluid weer.
+        <br>Alle punten in het grafiek worden samples genoemd en kunnen binair worden opgeslagen. Kijk maar eens naar
+        dit tabel:
+    </p>
+    <img class="fade-in" width="600" height="auto"
+        style="background-color: var(--bg-accent-color2); filter: brightness(1.2); padding: 5px;"
+        src="/s-site/assets/tabel.png">
+    <p class="fade-in">Als je de opgenomen punten in een grafiek zet, zie je dat het resultaat op het echte geluid lijkt. Hoe meer
+        samples, hoe hoger het resultaat.
+        <br>"De sample rate is het aantal keer per seconde dat een geluid wordt gemeten bij het digitaliseren. Voor
+        muziek wordt vaak 44.100 Hz (of 44,1 Khz) keer per seconde gebruikt."</p>
+
+    <p class="fade-in">Hieronder heb je een video van het resultaat van een hoge en lage sample rate.</p>
+    <iframe class="fade-in" width="560" height="315" src="https://www.youtube.com/embed/UaKho805vCE?si=gXcy7nRHrYsHattU"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"></iframe>
 </body>
 
 </html>
