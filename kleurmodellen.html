@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kleurmodellen</title>
+    <title>Bitmap en Vectorafbeeldingen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://tctam.nl/style.css">
     <script src="https://tctam.nl/s-site/script.js"></script>
@@ -17,22 +17,6 @@
         /* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
         .visible {
             opacity: 1 !important;
-        }
-
-        #verhaal {
-            width: 85%;
-        }
-
-        body {
-            text-align: left;
-        }
-
-        th,
-        td {
-            border: 1px solid var(--text-color);
-            padding: 8px;
-            text-align: left;
-            width: 140px;
         }
     </style>
     <script>
@@ -52,145 +36,88 @@
 </head>
 
 <body style="margin: 0 auto; width: 80%; text-align: left;">
-    <h1 class="fade-in">Kleurmodellen</h1>
+    <h1 style="text-wrap: wrap;" class="fade-in">Bitmap en Vector afbeeldingen</h1>
+    <b class="fade-in">Een afbeelding, je hebt er een hele boel. Maar hoe werken ze nou? Hoe wordt de foto opgeslagen,
+        terwijl die zo
+        min mogelijk data kost? Wat voor soorten afbeeldingen zijn er? In dit verhaal leer je dat allemal.</b>
+    <p class="fade-in">In deze blog leer je over:</p>
+    <a class="fade-in" href="#bitmap-vector">1. Het verschil tussen een bitmapafbeelding en een vectorafbeelding</a>
+    <br><a class="fade-in" href="#geluid">2. Hoe geluid gedigitaliseerd word en wat samplen en sample rate betekenen</a>
 
-    <div style="margin-bottom: 20px;" id="verhaal">
-        <b class="fade-in">Pixels, je hebt ze tegenwoordig overal. Kleine lampjes in groepen van drie in het scherm
-            van
-            je telefoon,
-            computer of TV noem je pixels. Als je heel dichtbij het scherm ernaar kijkt, zie je hoogstwaarschijnlijk
-            pixels.
-            Zie je dat niet? Dan heeft het scherm een hoge resolutie.
-        </b>
-        <br>
-        <br><b class="fade-in">Maar wat zijn deze pixels nou precies?</b>
+    <br>
+    <br>
 
-        <p class="fade-in">Zoals ik net al zei, zijn pixels kleine blokjes met drie lampjes erin. Deze lampjes
-            hebben drie kleuren:
-            <span style="color: #ff0000;">rood</span>, <span style="color: #00ff00;">groen</span> en <span
-                style="color: #0000ff;">blauw</span>. Door de individuele lampjes feller en zwakker te laten branden
-            ontstaan er beelden op je scherm.
-        </p>
-        <img class="fade-in" src="/s-site/assets/pixels.jpg" height="250px" style="max-width: 90%;"
-            alt="foto pixels"><img class="fade-in" style="margin-left: 10px;" src="/s-site/assets/rgb.png"
-            height="250px" style="max-width: 90%;" alt="foto rgb">
+    <h3 class="fade-in" id="bitmap-vector">Het verschil tussen een bitmapafbeelding en een vectorafbeelding</h3>
+    <h4 class="fade-in">Bitmapafbeelding:</h4>
+    <p class="fade-in">Zoals je op <a href="/s-site/kleurmodellen.html">deze pagina</a> hebt geleerd, bestaat een
+        afbeelding uit een
+        aantal pixels. Zij hebben allemaal een bepaalde kleur. Hoe meer pixels hoe hoger de <a
+            onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
+            title="Resolutie is de scherpte van een beeld, bepaald door het aantal pixels. Hoe meer pixels, hoe scherper het beeld.">ⓘ
+            resolutie</a>. Een foto die is
+        gemaakt van pixels noemen we een bitmapafbeelding.</p>
+    <p class="fade-in">Deze afbeeldingen hebben 2 belangrijke eigenschappen/nadelen.
+        <br>Een bitmapafbeelding kost erg veel opslagruimte, zo kan die al snel tot 5mb groot worden. Dat betekent dat
+        je op de gemiddelde telefoon (128GB) 25600 afbeeldingen kan hebben, dat lijkt misschien veel, maar let er wel op
+        dat je telefoon ook nog een besturingssysteem en apps bevat.
+        <br>Als je op een bitmapafbeelding gaat inzoomen worden de pixels steeds zichtbaarder en vermindert de
+        kwaliteit.
+    </p>
+    <img class="fade-in" width="505" height="280" style="background-color: var(--bg-accent-color2); padding: 5px;"
+        src="/s-site/assets/pixels-bad-good.png">
+    <p class="fade-in">Stel dat je een afbeelding hebt die een grote oppervlakte moet bedekken. Dan moet je een foto van
+        een hoge <a onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
+            title="Resolutie is de scherpte van een beeld, bepaald door het aantal pixels. Hoe meer pixels, hoe scherper het beeld.">ⓘ
+            resolutie</a> hebben, je kan je dan wel voorstellen dat dat heel veel opslag kost. Daar hebben we een
+        vectorafbeelding voor.</p>
 
-        <p class="fade-in">Denk bijvoorbeeld aan verf mengen. Door de kleuren van RGB te mengen
-            krijg je weliswaar andere kleuren dan bij verf.</>
+    <h4 class="fade-in">Vectorafbeelding</h4>
+    <p class="fade-in">Een vectorafbeelding bestaat niet uit allemaal losse pixels, maar uit de vormen van de
+        afbeelding.</p>
+    <img class="fade-in" width="300" height="300" style="background-color: var(--bg-accent-color2); padding: 5px;"
+        src="/s-site/assets/logo.png">
+    <p class="fade-in">Dat zou je logo zijn, een bitmapafbeelding van 8 x 11 = 88px. Maar als je nou zou willen dat de
+        kwaliteit zo goed mogelijk blijft, sla je hem op als een vectorafbeelding.</p>
+    <p class="fade-in">Dat zou er ongeveer een beetje zo uitzien: vierkant 2,2 blauw, dat kan je dan zien als een
+        vierkant van 2x2 px. Zo zou die dus bij het vergroten of verkleinen even scherp blijven omdat die een vierkant
+        <a onclick="alert('Houd je muis er boven voor de definitie!')" style="cursor: pointer;"
+            title="Dynamisch betekent dat iets zich aanpast aan de situatie. Het beschrijft situaties of systemen die flexibel zijn en kunnen aanpassen.">ⓘ
+            dynamisch</a> geladen.
+    </p>
+    <p class="fade-in">Het nadeel van deze techniek is dat het onmogelijk is om met een fototoestel een vectorafbeelding
+        te maken. Dit komt omdat de wereld niet bestaat uit vormen, maar uit unieke verschillende dingen.</p>
 
-        <table class="fade-in">
-            <thead>
-                <tr>
-                    <th>Kleur 1</th>
-                    <th>Kleur 2</th>
-                    <th>Kleur 3</th>
-                    <th>Nieuwe Kleur</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Zwart</td>
-                </tr>
-                <tr>
-                    <td>Rood</td>
-                    <td>Groen</td>
-                    <td>Blauw</td>
-                    <td>Wit</td>
-                </tr>
-                <tr>
-                    <td>Rood</td>
-                    <td>Groen</td>
-                    <td>-</td>
-                    <td>Geel</td>
-                </tr>
-                <tr>
-                    <td>Rood</td>
-                    <td>Blauw</td>
-                    <td>-</td>
-                    <td>Paars</td>
-                </tr>
-                <tr>
-                    <td>Blauw</td>
-                    <td>Groen</td>
-                    <td>-</td>
-                    <td>Turquoise</td>
-                </tr>
-            </tbody>
-        </table>
+    <h3 id="geluid" class="fade-in">Geluidsfragmenten:</h3>
+    <b class="fade-in">Hoe kunnen computers nou geluid opslaan</b>
+    <p class="fade-in">Geluid is eigenlijk een soort trilling. Om dit in een computer op te slaan, maken we eur een
+        soort digitale foto
+        van. Met een microfoon vangen we die trillingen op en zetten ze om in elektrische signalen en vervolgens in
+        nullen en enen. Dit proces wordt <b>samplen</b> genoemd Zo kunnen we het geluid later weer afspelen door die
+        getallen om te zetten in
+        elektrische signalen die de speakers laten trillen.</p>
+    <p class="fade-in">Tijdens het samplen word er bijvoorbeeld 1 keer per seconde gemeten wat de sterkte is van het
+        geluid. Dit kun je in een grafiek weergeven.</p>
+    <img class="fade-in" width="auto" height="300"
+        style="background-color: var(--bg-accent-color2); filter: brightness(1.2); padding: 5px;"
+        src="/s-site/assets/grafiek.png">
+    <p class="fade-in">De horizontale as geeft het verloop van de tijd aan, en de verticale as geeft de sterkte van het
+        geluid weer.
+        <br>Alle punten in het grafiek worden samples genoemd en kunnen binair worden opgeslagen. Kijk maar eens naar
+        dit tabel:
+    </p>
+    <img class="fade-in" width="600" height="auto"
+        style="background-color: var(--bg-accent-color2); filter: brightness(1.2); padding: 5px;"
+        src="/s-site/assets/tabel.png">
+    <p class="fade-in">Als je de opgenomen punten in een grafiek zet, zie je dat het resultaat op het echte geluid lijkt. Hoe meer
+        samples, hoe hoger het resultaat.
+        <br>"De sample rate is het aantal keer per seconde dat een geluid wordt gemeten bij het digitaliseren. Voor
+        muziek wordt vaak 44.100 Hz (of 44,1 Khz) keer per seconde gebruikt."</p>
 
-        <p class="fade-in">Het RGB-model is gebaseerd op een zwarte achtergrond. Als het beeldscherm uitstaat, is
-            het zwart. De
-            lampjes van de pixels branden niet.</p>
-
-        <p class="fade-in">Door kleuren aan de zwarte achtergrond toe te voegen ontstaan er nieuwe kleuren.
-            <br>Je krijgt de kleuren door te mengen.
-            <br><span style="color: rgb(225, 0, 0);">RRR</span> = rood indicator in %
-            <br><span style="color: rgb(0, 255, 0);">GGG</span> = groen indicator in %
-            <br><span style="color: rgb(0, 0, 255);">BBB</span> = blauw indicator in %
-            <br>De hoeveelheden kunnen worden aangegeven vanaf 0% tot 255%. De structuur ziet er
-            zo uit: (RRR, GGG, BBB). Geel krijg je bijvoorbeeld door rood en groen te mengen, je doet dus: RRR =
-            255%, GGG = 255% en BBB = 0%. De officiele structuur is dan geel = 'rgb(255, 255, 0)'. Nu doe ik het in
-            de
-            computer en krijg ik <span style="color: rgb(225, 255, 0);">deze</span> kleur.
-        </p>
-
-        <br>
-        <br>
-
-        <p class="fade-in">Nu hebben we ook nog het CMY-model. Die is handig voor een witte achtergrond,
-            bijvoorbeeld bij het printen op een wit vel papier. Als je het RGB-model zou gebruiken gaat dat mis. Die
-            is afgestemd voor een zwarte achtergrond (jouw scherm) als je op een witte achtergrond gaat printen gaat
-            het dus mis.</p>
-        <p class="fade-in">Daarvoor is er dus een speciaal model het CMY-model of in andere woorden, het
-            Cyan-Magenta-Yellowmodel. Bij dit model worden er kleuren toegevoegd aan een witte achtergrond. Een mix
-            van alle drie de kleuren geeft nu geen zwart maar donkergrijs. Daarom heeft men het CMYK-model bedacht.
-            Die zorgt ervoor dat je toch zwart kunt maken. De k staat dan voor <span
-                style="color: var(--h1234-color);">k</span>ey of voor blac<span
-                style="color: var(--h1234-color);">k</span>.
-            <br>Kleurenprinters gebruiken daarom ook vaak vier verschillende patronen.
-        </p>
-
-        <b class="fade-in">Dit is een vergelijking tussen het RGB-model en het CMYK-model:</b>
-        <table class="fade-in">
-            <thead>
-                <tr>
-                    <th>Kleur</th>
-                    <th>RGB</th>
-                    <th>CMYK</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Rood</td>
-                    <td>255,0,0</td>
-                    <td>0%,100%,100%</td>
-                </tr>
-                <tr>
-                    <td>Blauw</td>
-                    <td>0,0,255</td>
-                    <td>100%,100%,0%</td>
-                </tr>
-                <tr>
-                    <td>Oranje</td>
-                    <td>255,128,0</td>
-                    <td>0%,50%,100%</td>
-                </tr>
-                <tr>
-                    <td>Magenta</td>
-                    <td>255,0,255</td>
-                    <td>0%,100%,0%</td>
-                </tr>
-                <tr>
-                    <td>Grijs</td>
-                    <td>128,128,128</td>
-                    <td>0%,0%,0%(,50%)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <p class="fade-in">Hieronder heb je een video van het resultaat van een hoge en lage sample rate.</p>
+    <iframe class="fade-in" width="80%" height="315" src="https://www.youtube.com/embed/UaKho805vCE?si=gXcy7nRHrYsHattU"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"></iframe>
 </body>
 
 </html>
