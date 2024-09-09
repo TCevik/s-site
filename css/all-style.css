@@ -1,0 +1,13 @@
+/* Begin met alle elementen onzichtbaar */
+.fade-in {
+    opacity: 0 !important;
+    /* Zet de opacity op 0, waardoor elementen onzichtbaar zijn */
+    transition: opacity 1s ease-in-out !important;
+    /* Zorgt voor een vloeiende overgang van de opacity over 1 seconde */
+}
+
+/* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
+.visible {
+    opacity: 1 !important;
+    /* Zet de opacity op 1, waardoor elementen zichtbaar zijn */
+}
