@@ -7,90 +7,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://tctam.nl/style.css">
     <script src="https://tctam.nl/s-site/script.js"></script>
-    <style>
+<style>
         /* Begin met alle elementen onzichtbaar */
         .fade-in {
-            opacity: 0 !important;
-            transition: opacity 1s ease-in-out !important;
+            opacity: 0 !important; /* Zet de opacity op 0, waardoor elementen onzichtbaar zijn */
+            transition: opacity 1s ease-in-out !important; /* Zorgt voor een vloeiende overgang van de opacity over 1 seconde */
         }
 
         /* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
         .visible {
-            opacity: 1 !important;
+            opacity: 1 !important; /* Zet de opacity op 1, waardoor elementen zichtbaar zijn */
         }
 
         /* Voor de uitschuifbare lijst met vakken */
         #subjects {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out !important;
+            max-height: 0; /* Zet de maximale hoogte op 0, waardoor de lijst ingeklapt is */
+            overflow: hidden; /* Verbergt de inhoud die buiten de maximale hoogte valt */
+            transition: max-height 0.5s ease-in-out !important; /* Zorgt voor een vloeiende overgang van de hoogte over 0.5 seconde */
         }
 
         /* Als de lijst uitgeklapt is */
         #subjects.expanded {
-            max-height: 200px;
-            /* Pas deze waarde aan op basis van de verwachte hoogte van de inhoud */
+            max-height: 200px; /* Zet de maximale hoogte op 200px, waardoor de lijst uitgeklapt is */
         }
 
         #hobbies {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            /* Voegt ruimte toe tussen tekst en afbeelding */
+            display: flex; /* Zet het element op flexbox layout */
+            align-items: center; /* Centreert de items verticaal */
+            gap: 20px; /* Voegt 20px ruimte toe tussen de items */
+            /* Voegt ruimte toe tussen tekst en afbeelding */ 
         }
 
         #hobbies-text {
-            max-width: 75%;
+            max-width: 75%; /* Beperkt de breedte van de tekst tot 75% van de container */
             /* Zorgt ervoor dat de tekst niet te breed wordt */
         }
 
         #later {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            display: flex; /* Zet het element op flexbox layout */
+            align-items: center; /* Centreert de items verticaal */
+            gap: 20px; /* Voegt 20px ruimte toe tussen de items */
             /* Voegt ruimte toe tussen tekst en afbeelding */
         }
 
         #later-text {
-            max-width: 75%;
+            max-width: 75%; /* Beperkt de breedte van de tekst tot 75% van de container */
             /* Zorgt ervoor dat de tekst niet te breed wordt */
         }
 
         /* Media query voor schermen kleiner dan 800px */
-        @media (max-width: 800px) {
+        @media (max-width: 800px) { 
             #hobbies-img {
-                display: none;
+                display: none; /* Verbergt de afbeelding */
                 /* Verbergt de afbeelding */
             }
 
             #later-img {
-                display: none;
+                display: none; /* Verbergt de afbeelding */
                 /* Verbergt de afbeelding */
             }
 
             #tctam-logo {
-                display: none;
+                display: none; /* Verbergt het logo */
             }
 
             #hobbies-text {
-                max-width: 100%;
+                max-width: 100%; /* Zet de maximale breedte van de tekst op 100% */
                 /* Zorgt ervoor dat de tekst weer breed mag zijn */
             }
 
             #later-text {
-                max-width: 100%;
+                max-width: 100%; /* Zet de maximale breedte van de tekst op 100% */
                 /* Zorgt ervoor dat de tekst weer breed mag zijn */
             }
 
             #hobbies {
-                margin-top: 20px !important;
+                margin-top: 20px !important; /* Voegt 20px marge toe aan de bovenkant */
             }
 
             #later {
-                margin-top: 15px !important;
+                margin-top: 15px !important; /* Voegt 15px marge toe aan de bovenkant */
             }
         }
     </style>
+
     <script>
         // Functie om elementen één voor één te laten infaden
         function fadeInElements() {
