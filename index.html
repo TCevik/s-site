@@ -10,17 +10,15 @@
     <link rel="stylesheet" href="https://tctam.nl/s-site/css/all-style.css">
     <script src="https://tctam.nl/s-site/script.js"></script>
     <script>
-        // Functie om elementen één voor één te laten infaden
         function fadeInElements() {
             const elements = document.querySelectorAll('.fade-in');
             elements.forEach((element, index) => {
                 setTimeout(() => {
                     element.classList.add('visible');
-                }, index * 100); // De vertraging is 100ms per element
+                }, index * 100);
             });
         }
 
-        // Wanneer de pagina is geladen, start het infaden
         window.addEventListener('load', fadeInElements);
 
         function getNextBirthday() {
@@ -36,11 +34,10 @@
         }
 
         function calculateAge() {
-            const birthdate = new Date(2009, 4, 18); // Mijn geboortedatum hier
+            const birthdate = new Date(2009, 4, 18);
             const today = new Date();
             let age = today.getFullYear() - birthdate.getFullYear();
 
-            // Aanpassen als de verjaardag nog niet heeft plaatsgevonden dit jaar
             if (today < new Date(today.getFullYear(), birthdate.getMonth(), birthdate.getDate())) {
                 age--;
             }
@@ -85,10 +82,11 @@
 </head>
 
 <body>
-    <h1 class="fade-in">Welkom op mijn site!</h1>
-    <h3 class="fade-in">Door Tamer Çevik</h3>
+    <h1 class="fade-in">Welkom op mijn site!</h1> <!--Titel-->
+    <h3 class="fade-in">Door Tamer Çevik</h3> <!--Ondertitel-->
 
     <div class="diff-color-section1 fade-in" id="aboutme" style="display: flex; flex-direction: column;">
+        <!--Over Mij Sectie-->
         <div style="display: flex; width: 100%; justify-content: space-between; margin-top: 20px;">
             <div id="tctam-logo" class="fade-in"
                 style="margin-top: -3px; width: 200px; margin-right: 20px; text-align: right;">

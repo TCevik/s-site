@@ -11,3 +11,14 @@
     opacity: 1 !important;
     /* Zet de opacity op 1, waardoor elementen zichtbaar zijn */
 }
+
+.footer {
+    background-color: var(--bg-accent-color1);
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--text-color);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}

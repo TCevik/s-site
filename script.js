@@ -1,3 +1,4 @@
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht.
 document.addEventListener("DOMContentLoaded", function () {
 	sideMenuNav();
 });
@@ -105,3 +106,11 @@ function sideMenuNav() {
 	document.body.appendChild(openButton);
 	document.body.appendChild(sideBar);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+	const footer = document.createElement('div');
+	footer.classList.add('footer');
+	footer.innerHTML = "Gemaakt door Tamer Çevik - H4B";
+
+	document.body.appendChild(footer);
+});
