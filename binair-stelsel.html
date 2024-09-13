@@ -8,17 +8,124 @@
     <link rel="stylesheet" href="https://tctam.nl/style.css">
     <script src="https://tctam.nl/s-site/script.js"></script>
     <style>
-        /* Begin met alle elementen onzichtbaar */
-        .fade-in {
-            opacity: 0 !important;
-            transition: opacity 1s ease-in-out !important;
+        /* Basisstijl voor de binaire animatie */
+        #binary-animation {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3em;
+            color: #00ff00;
+            /* Start met groen */
+            text-align: center;
+            margin-top: 50px;
+            transition: transform 0.2s ease, color 0.5s ease;
         }
 
-        /* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
-        .visible {
-            opacity: 1 !important;
+        /* Glitch-effect */
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+                color: #00ff00;
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+                color: #ff00ff;
+            }
+
+            40% {
+                transform: translate(2px, -2px);
+                color: #00ffff;
+            }
+
+            60% {
+                transform: translate(-1px, 1px);
+                color: #ff9900;
+            }
+
+            80% {
+                transform: translate(1px, -1px);
+                color: #ff0000;
+            }
+
+            100% {
+                transform: translate(0);
+                color: #00ff00;
+            }
+        }
+
+        /* Neon glow effect */
+        #binary-animation.glow {
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+        }
+
+        /* Pulsatie effect */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Voeg de pulsatie toe */
+        #binary-animation.pulse {
+            animation: pulse 1s infinite;
+        }
+
+        table, th, td {
+            border: 1px solid var(--text-color);
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
         }
     </style>
+</head>
+
+<body style="width: 80%; margin: 0 auto;">
+    <h1 class="fade-in">Binair Stelsel</h1>
+    <h1 class="fade-in" id="binary-animation" class="glow pulse">01</h1>
+
+    <b class="fade-in">Als je ‘het binaire stelsel’ hoort, denk je misschien dat het super moeilijk is. Eigenlijk is het super
+        eenvoudig. We tellen normaal gesproken met behulp van de cijfers 0 tot 9, dat noemen we het decimale stelsel.
+        Bij het binaire stelsel tellen we daarentegen met behulp van alleen 0 en 1. Dit is nodig, omdat alle computers
+        data opslaan en verwerken met behulp van elektriciteit, dat aan of uit kan zijn.</b>
+
+    <p class="fade-in">Omdat computers dus alleen met stroom werken moeten er 2 soorten zijn. De 0 en de 1, waarbij de 0 uit betekent,
+        en de 1 aan. Stel dat je het getal 2 wil hebben, dan kan dat niet want je hebt alleen nullen en enen. Toch is
+        dat niet zo, want met deze 2 getallen kan je alles maken wat je wil.</p>
+    
+    <p class="fade-in">Hoe maak ik dan een 2?</b>
+    <p class="fade-in">Je kan het zo zien: je hebt een paar vakjes die van rechts naar links worden gelezen. Je begint met 1 dan 2 dan 4 dan 8 dan 16 enzovoort.</p>
+
+    <table class="fade-in" style="margin: 0 auto;">
+        <tr>
+            <td>aan / uit:</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>optellen:</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <p class="fade-in">Dus een 2 in binair is 010 want: de 4 moet uit, de 2 moet aan en de 1 moet uit.</p>
+
+    <p class="fade-in">Dat is alles! Het binaire stelsel is dus gewoon een andere manier van tellen, die perfect werkt voor hoe computers in elkaar zitten.</p>
+
+    <h3 class="fade-in">Nu, gaan we je kennis testen! Probeer dit spel eens. Het word steeds moeilijker.</h3>
+    <iframe class="fade-in" src="https://games.penjee.com/binary-bonanza/game.php" width="700" height="500" frameborder="no"
+        scrolling="no"></iframe>
+
     <script>
         // Functie om elementen één voor één te laten infaden
         function fadeInElements() {
@@ -32,12 +139,36 @@
 
         // Wanneer de pagina is geladen, start het infaden
         window.addEventListener('load', fadeInElements);
-    </script>
-</head>
 
-<body>
-    <h1 class="fade-in">Binair Stelsel</h1>
-    
+        const binaryText = document.getElementById('binary-animation');
+        const binarySequences = [
+            "01", "001", "101", "0101", "00101", "110101",
+            "1110101", "101110101", "00101110101", "101101110101", "01101101110101"
+        ];
+
+        let index = 0;
+
+        function animateBinary() {
+            binaryText.textContent = binarySequences[index];
+
+            // Voeg het glitch-effect toe
+            binaryText.style.animation = 'glitch 0.1s';
+
+            // Na 500ms haal de animatie weg zodat het opnieuw kan starten
+            setTimeout(() => {
+                binaryText.style.animation = '';
+            }, 500);
+
+            // Wissel de kleur van de tekst willekeurig
+            const colors = ['#00ff00', '#ff00ff', '#00ffff', '#ff9900', '#ff0000'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            binaryText.style.color = randomColor;
+
+            index = (index + 1) % binarySequences.length; // Herhaal de animatie
+        }
+
+        setInterval(animateBinary, 1000); // Verander elke 1000ms
+    </script>
 </body>
 
 </html>

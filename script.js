@@ -106,11 +106,3 @@ function sideMenuNav() {
 	document.body.appendChild(openButton);
 	document.body.appendChild(sideBar);
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-	const footer = document.createElement('div');
-	footer.classList.add('footer');
-	footer.innerHTML = "Gemaakt door Tamer Çevik - H4B";
-
-	document.body.appendChild(footer);
-});
