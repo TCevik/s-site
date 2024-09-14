@@ -78,10 +78,14 @@
             animation: pulse 1s infinite;
         }
 
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid var(--text-color);
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: center;
         }
@@ -92,17 +96,20 @@
     <h1 class="fade-in">Binair Stelsel</h1>
     <h1 class="fade-in" id="binary-animation" class="glow pulse">01</h1>
 
-    <b class="fade-in">Als je ‘het binaire stelsel’ hoort, denk je misschien dat het super moeilijk is. Eigenlijk is het super
+    <b class="fade-in">Als je ‘het binaire stelsel’ hoort, denk je misschien dat het super moeilijk is. Eigenlijk is het
+        super
         eenvoudig. We tellen normaal gesproken met behulp van de cijfers 0 tot 9, dat noemen we het decimale stelsel.
         Bij het binaire stelsel tellen we daarentegen met behulp van alleen 0 en 1. Dit is nodig, omdat alle computers
         data opslaan en verwerken met behulp van elektriciteit, dat aan of uit kan zijn.</b>
 
-    <p class="fade-in">Omdat computers dus alleen met stroom werken moeten er 2 soorten zijn. De 0 en de 1, waarbij de 0 uit betekent,
+    <p class="fade-in">Omdat computers dus alleen met stroom werken moeten er 2 soorten zijn. De 0 en de 1, waarbij de 0
+        uit betekent,
         en de 1 aan. Stel dat je het getal 2 wil hebben, dan kan dat niet want je hebt alleen nullen en enen. Toch is
         dat niet zo, want met deze 2 getallen kan je alles maken wat je wil.</p>
-    
+
     <p class="fade-in">Hoe maak ik dan een 2?</b>
-    <p class="fade-in">Je kan het zo zien: je hebt een paar vakjes die van rechts naar links worden gelezen. Je begint met 1 dan 2 dan 4 dan 8 dan 16 enzovoort.</p>
+    <p class="fade-in">Je kan het zo zien: je hebt een paar vakjes die van rechts naar links worden gelezen. Je begint
+        met 1 dan 2 dan 4 dan 8 dan 16 enzovoort.</p>
 
     <table class="fade-in" style="margin: 0 auto;">
         <tr>
@@ -121,11 +128,16 @@
 
     <p class="fade-in">Dus een 2 in binair is 010 want: de 4 moet uit, de 2 moet aan en de 1 moet uit.</p>
 
-    <p class="fade-in">Dat is alles! Het binaire stelsel is dus gewoon een andere manier van tellen, die perfect werkt voor hoe computers in elkaar zitten.</p>
+    <p class="fade-in">Dat is alles! Het binaire stelsel is dus gewoon een andere manier van tellen, die perfect werkt
+        voor hoe computers in elkaar zitten.</p>
 
-    <h3 class="fade-in">Nu, gaan we je kennis testen! Probeer dit spel eens. Het word steeds moeilijker.</h3>
-    <iframe class="fade-in" src="https://games.penjee.com/binary-bonanza/game.php" width="700" height="500" frameborder="no"
-        scrolling="no"></iframe>
+    <h3 class="fade-in">Nu, gaan we je kennis testen! Probeer dit spel eens. Het wordt steeds moeilijker.</h3>
+    <!-- Knop om het iframe te laden -->
+    <button class="fade-in" id="loadGameBtn">Start het spel</button>
+
+    <!-- Iframe zonder src -->
+    <iframe id="gameIframe" style="margin: 0 auto; display: none;" class="fade-in" width="700" height="500"
+        frameborder="no" scrolling="no"></iframe>
 
     <script>
         // Functie om elementen één voor één te laten infaden
@@ -152,23 +164,36 @@
         function animateBinary() {
             binaryText.textContent = binarySequences[index];
 
-            // Voeg het glitch-effect toe
             binaryText.style.animation = 'glitch 0.1s';
 
-            // Na 500ms haal de animatie weg zodat het opnieuw kan starten
             setTimeout(() => {
                 binaryText.style.animation = '';
             }, 500);
 
-            // Wissel de kleur van de tekst willekeurig
-            const colors = ['#00ff00', '#ff00ff', '#00ffff', '#ff9900', '#ff0000'];
+            const colors = [
+                '#00ff00', '#ff00ff', '#00ffff', '#ff9900', '#ff0000', '#0000ff', '#ffff00', '#8b00ff', '#ff4500', '#ff1493',
+                '#1e90ff', '#ff6347', '#7fff00', '#dc143c', '#00bfff', '#adff2f', '#ff69b4', '#4b0082', '#ffa07a', '#20b2aa',
+                '#32cd32', '#800000', '#66cdaa', '#daa520', '#8a2be2', '#deb887', '#ff8c00', '#9932cc', '#ffb6c1', '#4682b4',
+                '#2e8b57', '#d2691e', '#b22222', '#ffdead', '#f0e68c', '#00fa9a', '#ba55d3', '#db7093', '#ffdab9', '#cd5c5c',
+                '#f08080', '#eee8aa', '#98fb98', '#afeeee', '#dda0dd', '#fa8072', '#40e0d0', '#778899', '#b0c4de', '#7b68ee',
+                '#e9967a', '#9400d3', '#ff7f50', '#ff4500', '#ffdab9', '#dcdcdc', '#696969', '#f5f5f5', '#b0e0e6', '#ffefd5'
+            ];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             binaryText.style.color = randomColor;
 
-            index = (index + 1) % binarySequences.length; // Herhaal de animatie
+            index = (index + 1) % binarySequences.length;
         }
 
-        setInterval(animateBinary, 1000); // Verander elke 1000ms
+        setInterval(animateBinary, 1000);
+
+        const loadGameBtn = document.getElementById('loadGameBtn');
+        const gameIframe = document.getElementById('gameIframe');
+
+        loadGameBtn.addEventListener('click', function () {
+            gameIframe.src = "https://games.penjee.com/binary-bonanza/game.php";
+            gameIframe.style.display = 'block';
+            loadGameBtn.style.display = 'none';
+        });
     </script>
 </body>
 
