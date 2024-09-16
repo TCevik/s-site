@@ -27,6 +27,17 @@ var buttons = `
     <button onclick="window.location.href='/s-site/binair-stelsel'">Binair Stelsel</button>
 	<button onclick="window.location.href='/s-site/compressie'">Compressie</button>
 	<button onclick="window.location.href='/s-site/bitmap-vectorafbeeldingen'">Bitmap- en vectorafbeeldingen</button>
+
+    <p></p>
+    <div class="hover-menu">
+        <button class="hover-btn">Computerarchitectuur</button>
+        <div class="dropdown-content">
+            <button onclick="window.location.href='/s-site/architectuur1'">Architectuur 1</button>
+            <button onclick="window.location.href='/s-site/architectuur2'">Architectuur 2</button>
+            <button onclick="window.location.href='/s-site/architectuur3'">Architectuur 3</button>
+            </div>
+    </div>
+        
 	<p></p>
 	<button onclick="window.open('https://github.com/TCevik/s-site', '_blank')">Bekijk de broncode van de site</button>
 `;

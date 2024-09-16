@@ -11,3 +11,20 @@
     opacity: 1 !important;
     /* Zet de opacity op 1, waardoor elementen zichtbaar zijn */
 }
+
+.hover-menu {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 9999999;
+    background-color: var(--background-color);
+}
+
+.hover-menu:hover .dropdown-content {
+    display: block;
+}
