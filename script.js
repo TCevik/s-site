@@ -117,3 +117,16 @@ function sideMenuNav() {
 	document.body.appendChild(openButton);
 	document.body.appendChild(sideBar);
 }
+
+// Functie om elementen één voor één te laten infaden
+function fadeInElements() {
+	const elements = document.querySelectorAll('.fade-in');
+	elements.forEach((element, index) => {
+		setTimeout(() => {
+			element.classList.add('visible');
+		}, index * 100); // De vertraging is 100ms per element
+	});
+}
+
+// Wanneer de pagina is geladen, start het infaden
+window.addEventListener('load', fadeInElements);

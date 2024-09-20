@@ -140,19 +140,6 @@
         frameborder="no" scrolling="no"></iframe>
 
     <script>
-        // Functie om elementen één voor één te laten infaden
-        function fadeInElements() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('visible');
-                }, index * 100); // De vertraging is 100ms per element
-            });
-        }
-
-        // Wanneer de pagina is geladen, start het infaden
-        window.addEventListener('load', fadeInElements);
-
         const binaryText = document.getElementById('binary-animation');
         const binarySequences = [
             "01", "001", "101", "0101", "00101", "110101",

@@ -9,20 +9,6 @@
     <script src="https://tctam.nl/s-site/script.js"></script>
     <link rel="stylesheet" href="https://tctam.nl/s-site/css/kleurmodellen-style.css">
     <link rel="stylesheet" href="https://tctam.nl/s-site/css/all-style.css">
-    <script>
-        // Functie om elementen één voor één te laten infaden
-        function fadeInElements() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('visible');
-                }, index * 100); // De vertraging is 100ms per element
-            });
-        }
-
-        // Wanneer de pagina is geladen, start het infaden
-        window.addEventListener('load', fadeInElements);
-    </script>
 </head>
 
 <body style="margin: 0 auto; width: 80%; text-align: left;">

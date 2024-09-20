@@ -11,17 +11,6 @@
     <script src="https://tctam.nl/s-site/script.js"></script>
 
     <script>
-        function fadeInElements() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('visible');
-                }, index * 100);
-            });
-        }
-
-        window.addEventListener('load', fadeInElements);
-
         function getNextBirthday() {
             const today = new Date();
             const currentYear = today.getFullYear();
