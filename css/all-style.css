@@ -12,19 +12,30 @@
     /* Zet de opacity op 1, waardoor elementen zichtbaar zijn */
 }
 
+/* Stijl voor het hover menu element */
 .hover-menu {
+    /* Zet de positie op relatief zodat de dropdown content binnen dit element gepositioneerd kan worden */
     position: relative;
+    /* Zorgt ervoor dat het element een inline-block is */
     display: inline-block;
+    /* Zet de breedte op 100% */
     width: 100%;
 }
 
+/* Stijl voor de dropdown content */
 .dropdown-content {
+    /* De dropdown content is standaard niet zichtbaar */
     display: none;
+    /* Zet de positie op absoluut zodat het vrij gepositioneerd kan worden binnen de hover-menu */
     position: absolute;
+    /* Zet de z-index op een hoge waarde zodat de dropdown content boven andere elementen wordt weergegeven */
     z-index: 9999999;
+    /* Zet de achtergrondkleur op de waarde van de variabele --background-color */
     background-color: var(--background-color);
 }
 
+/* Stijl voor de dropdown content wanneer de muis over de hover-menu beweegt */
 .hover-menu:hover .dropdown-content {
+    /* De dropdown content wordt zichtbaar */
     display: block;
 }
