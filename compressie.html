@@ -12,20 +12,58 @@
 
 <body style="margin: 0 auto; width: 80%;">
     <h1 class="fade-in">Compressie</h1>
-    <b>Stel, je download een heel groot bestand upload. Dat zal heel veel data kosten. Daarom bestaat er
+
+    <h3 class="fade-in">Compressie bij afbeeldingen</h3>
+    <b class="fade-in">Stel, je download een heel groot bestand upload. Dat zal heel veel data kosten. Daarom bestaat er
         bestandscompressie. Daarmee word de bestandsgrootte van het bestand verkleind. Je opslag raakt minder snel vol
         en het kost minder data om te downloaden. Ook kunnen bestanden op die manier sneller worden gedownload.</b>
 
-    <p>Je gaat leren over:
+    <p class="fade-in">Je gaat leren over:
         <br>- Lossy compression
         <br>- Lossless compression
     </p>
 
-    <p>Bij lossy compression worden delen van het bestand letterlijk verwijderd, waardoor de kwaliteit en grootte van
+    <p class="fade-in">Bij lossy compression worden delen van het bestand letterlijk verwijderd, waardoor de kwaliteit
+        en grootte van
         het bestand afneemt. Als bijvoorbeeld een foto van de lucht 50 blauwtinten heeft, kan je dat verminderen omdat
-        je toch al die superkleine verschillen in kleuren toch niet kan zien. Daardoor word de afbeelding kleiner.</p>
+        je toch al die superkleine verschillen in kleuren toch niet kan zien. Daardoor word de afbeelding kleiner in
+        bestandsgrootte.</p>
 
-    <p>In tegenstelling to lossy compression word er bij lossless compression de originele kwaliteit niet aangepast. Er word dus ook geen informatie verwijderd. Het bestand word op een efficiente manier opgeslagen. </p>
+    <p class="fade-in">In tegenstelling to lossy compression word er bij lossless compression de originele kwaliteit
+        niet aangepast. Er word dus ook geen informatie verwijderd. Het bestand word op een efficiente manier
+        opgeslagen. Dan, als de kleuren bijvoorbeeld (36, 36, 36, 36) is, zal dat worden opgeslagen als (4,36)</p>
+    <img class="fade-in" src="/assets/compressie.png" alt="Compressie afbeelding">
+
+    <p class="fade-in">De bestanden die lossless compression ondergaan, worden niet aangetast. Daardoor kan de
+        afbeelding weer worden teruggezet naar het origineel. Bij lossy compression is dit niet mogelijk omdat er echt
+        dingen worden verwijderd of aangepast.</p>
+
+    <p class="fade-in">Lossy compression zorgt daarentegen wel voor een kleiner bestand. Dit kan je merken als je een
+        foto met je telefoon maakt, en het vervolgens naar iemand verstuurd. Dan word er automatisch een compressie
+        gemaakt en verstuurd naar de ontvanger om minder data te gebruiken. Dan krijgt de ontvanger dus een minder
+        scherpe foto binnen dan jij hebt gemaakt.</p>
+
+    <iframe class="fade-in" width="560" height="315" src="https://www.youtube.com/embed/3nym3fkHqyk?si=_AXGPd5XZ4O1Hiiw"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h3 class="fade-in">Compressie bij geluidsbestanden</h3>
+    <p class="fade-in">Ook geluidsbestanden kunnen worden gecomprimeerd. Een uur aan muziek in Cd-kwaliteit is al snel
+        rond de 700mb.
+        Als je dat gaat streamen is je data snel op. Een bekende compressie soort bij muziek is MP3. Net als bij
+        afbeeldingen kan er veel van het geluidsbestand af zonder dat het de kwaliteit erg beïnvloed. Het menselijk oor
+        kan tot ongeveer 20kHz, maar verschilt per persoon. Daarom worden de geluiden die hoger dan 16kHz zijn
+        weggelaten als er veel andere geluiden zijn, want die hebben weinig nut.</p>
+
+    <p class="fade-in">Ook is de sample rate van belang. Daarbij hoort de hoeveelheid bits die erbij worden opgeslagen. Deze 2
+        vermenigvuldigd geeft de bitrate van de muziek. Dit word uitgedrukt in kbps (kilobits per seconde).
+        Proffesionele muziek word opgenomen met een sample rate van 44.1kHz. Over het algemeen worden er 32 bits
+        gebruikt om dit op te slaan. Dan is het dus 1.411,2 kbps. Als de bitrate van de muziek word teruggebracht naar
+        256kbps is het verschil voor mensen bijna onhoorbaar. Als de bitrate nog verder daalt kan het zijn dat je wat
+        vervormde geluiden hoort.</p>
+
+    <p class="fade-in">MP3 bestanden zijn dus een goede manier om je geluid op te slaan.</p>
 </body>
 
 </html>
