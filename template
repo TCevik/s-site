@@ -3,40 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kleurmodellen</title>
+    <title>NAAM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://tctam.nl/style.css">
     <script src="https://tctam.nl/s-site/script.js"></script>
-    <style>
-        /* Begin met alle elementen onzichtbaar */
-        .fade-in {
-            opacity: 0 !important;
-            transition: opacity 1s ease-in-out !important;
-        }
-
-        /* Wanneer een element de class 'visible' krijgt, wordt het zichtbaar */
-        .visible {
-            opacity: 1 !important;
-        }
-    </style>
-    <script>
-        // Functie om elementen één voor één te laten infaden
-        function fadeInElements() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('visible');
-                }, index * 100); // De vertraging is 100ms per element
-            });
-        }
-
-        // Wanneer de pagina is geladen, start het infaden
-        window.addEventListener('load', fadeInElements);
-    </script>
 </head>
 
 <body>
-    <h1 class="fade-in">Kleurmodellen</h1>
+    <h1 class="fade-in">TITEL</h1>
     
 </body>
 

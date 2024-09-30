@@ -1,4 +1,9 @@
-// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht.
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+
 document.addEventListener("DOMContentLoaded", function () {
 	sideMenuNav();
 });
@@ -23,6 +28,7 @@ window.addEventListener('load', function () {
 var buttons = `
 	<h3>Site Navigatie</h3>
     <button onclick="window.location.href='/s-site/'">Homepagina</button>
+	<button onclick="window.location.href='/s-site/algemeen'">Algemene Informatie</button>
 	<button onclick="window.location.href='/s-site/kleurmodellen'">Kleurmodellen</button>
     <button onclick="window.location.href='/s-site/binair-stelsel'">Binair Stelsel</button>
 	<button onclick="window.location.href='/s-site/compressie'">Compressie</button>
