@@ -36,7 +36,7 @@ var buttons = `
 
     <p></p>
     <div class="hover-menu">
-        <button class="hover-btn">Computerarchitectuur</button>
+        <button class="hover-btn" disabled>Computerarchitectuur - IN ONDERHOUD</button>
         <div class="dropdown-content">
             <button onclick="window.location.href='/s-site/architectuur1'">Architectuur 1</button>
             <button onclick="window.location.href='/s-site/architectuur2'">Architectuur 2</button>
