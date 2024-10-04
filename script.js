@@ -3,6 +3,23 @@
 // er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
 // er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
 // er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
+// er is mij verteld dat er geen opmerkingen bij het script hoeven omdat dit geen onderdeel is van de opdracht!!!
 
 document.addEventListener("DOMContentLoaded", function () {
 	sideMenuNav();
