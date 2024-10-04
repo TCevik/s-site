@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	footer.style.color = "white";
 	footer.style.textAlign = "center";
 	footer.style.padding = "20px";
-	footer.style.position = "fixed";
 	footer.style.bottom = "0";
 	footer.style.width = "100%";
 
