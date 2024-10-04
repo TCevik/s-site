@@ -138,7 +138,6 @@ window.addEventListener('load', fadeInElements);
 
 document.addEventListener("DOMContentLoaded", function() {
 	var footer = document.createElement("footer");
-	footer.style.backgroundColor = "#333";
 	footer.style.color = "white";
 	footer.style.textAlign = "center";
 	footer.style.padding = "20px";
