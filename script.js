@@ -134,5 +134,21 @@ function fadeInElements() {
 	});
 }
 
-// Wanneer de pagina is geladen, start het infaden
 window.addEventListener('load', fadeInElements);
+
+document.addEventListener("DOMContentLoaded", function() {
+	var footer = document.createElement("footer");
+	footer.style.backgroundColor = "#333";
+	footer.style.color = "white";
+	footer.style.textAlign = "center";
+	footer.style.padding = "20px";
+	footer.style.position = "fixed";
+	footer.style.bottom = "0";
+	footer.style.width = "100%";
+
+	var footerContent = document.createElement("p");
+	footerContent.textContent = "Gemaakt door Tamer Çevik";
+	footer.appendChild(footerContent);
+
+	document.body.appendChild(footer);
+});
