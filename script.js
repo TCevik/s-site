@@ -36,11 +36,11 @@ var buttons = `
 
     <p></p>
     <div class="hover-menu">
-        <button class="hover-btn" disabled>Computerarchitectuur - IN ONDERHOUD</button>
+        <button disabled class="hover-btn">Computerarchitectuur - IN ONDERHOUD</button>
         <div class="dropdown-content">
-            <button onclick="window.location.href='/s-site/architectuur1'">Architectuur 1</button>
-            <button onclick="window.location.href='/s-site/architectuur2'">Architectuur 2</button>
-            <button onclick="window.location.href='/s-site/architectuur3'">Architectuur 3</button>
+            <button disabled onclick="window.location.href='/s-site/architectuur1'">Architectuur 1</button>
+            <button disabled onclick="window.location.href='/s-site/architectuur2'">Architectuur 2</button>
+            <button disabled onclick="window.location.href='/s-site/architectuur3'">Architectuur 3</button>
             </div>
     </div>
         
