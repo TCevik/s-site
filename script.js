@@ -173,3 +173,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	document.body.appendChild(footer);
 });
+
+/* theme selector */
+function setCorrectTheme() {
+	const themeSwitch = document.getElementById("theme-switch");
+	let savedTheme = localStorage.getItem("themeSetting");
+
+	if (!savedTheme) {
+		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+		savedTheme = prefersDark ? "darkmode" : "lightmode";
+		localStorage.setItem("themeSetting", savedTheme);
+	}
+
+	document.body.classList.add(savedTheme);
+	themeSwitch.value = savedTheme;
+
+	themeSwitch.addEventListener("change", (event) => {
+		const selectedTheme = event.target.value;
+
+		document.body.classList.remove(...document.body.classList);
+		document.body.classList.add(selectedTheme);
+		localStorage.setItem("themeSetting", selectedTheme);
+	});
+}
+document.addEventListener("DOMContentLoaded", () => {
+	setCorrectTheme();
+});
