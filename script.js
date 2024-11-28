@@ -43,6 +43,12 @@ window.addEventListener('load', function () {
 });
 
 var buttons = `
+	<select style="width: 90%; margin-top: 10px;" id="theme-switch">
+	    <option value="lightmode">Light Mode</option>
+	    <option value="darkmode">Dark Mode</option>
+		<option value="highcontrast">High Contrast</option>
+	</select>
+
 	<h3>Site Navigatie</h3>
     <button onclick="window.location.href='/s-site/'">Homepagina</button>
 	<button onclick="window.location.href='/s-site/algemeen'">Algemene Informatie</button>
